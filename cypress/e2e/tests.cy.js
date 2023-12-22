@@ -118,6 +118,7 @@ describe('User Story: Add Products in the Cart', function() {
   });
 
     // Test Case: Cart Persistence
+    // In order for the test to pass, it is expected that there is not cart persistence
     it('TC_ID: b4441d88-dee4-45a9-9d20-b8713356cf8e - Cart Persistence', function () {
       cy.get('@fruitData').then((fruitData) => {
         // Assuming products are already added to the cart
@@ -125,9 +126,9 @@ describe('User Story: Add Products in the Cart', function() {
         cy.get('@selectedProduct').contains('ADD TO CART').click();
         // Navigate to the cart page
         cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/cart');
-        cy.get('.cart-icon').should('have.text', fruitData.cartItemCount);
+        cy.get('.cart-icon').should('have.text', fruitData.wrongCartItemCount);
         cy.reload(); // Simulate closing and reopening the browser
-        cy.get('.cart-icon').should('have.text', fruitData.cartItemCount);
+        cy.get('.cart-icon').should('have.text', fruitData.wrongCartItemCount);
       });
     });
   

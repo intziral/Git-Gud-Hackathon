@@ -2,7 +2,7 @@
     "expectedProductCount": 30, 
   
     "cartItemCount": 1,
-    "wrongCartItemCount": "0",
+    "wrongCartItemCount": 0,
     "totalCartItemCount": 5,
     "updatedCartItemCount": 4,
   

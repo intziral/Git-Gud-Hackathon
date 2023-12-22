@@ -58,15 +58,9 @@ describe('User Story: Complete Order', function() {
       cy.get('button').contains('Place Order').click();
 
       // Open the dropdown and select the country
-      cy.get('.products-wrapper').get('select').click();
-      cy.get('select').select('Greece');
+      cy.get("select").select('Greece');
 
-      // Check selection
+      // // Check selection
       cy.get('select option:selected').should('have.value', 'Greece');
-    });
-
-    // Test Case: Accept the Terms & Conditions
-    it('TC_ID: ffcc5468-a027-11ee-8c90-0242ac120002 -Accept the Terms & Conditions', function () {
-
     });
 });

@@ -126,7 +126,7 @@ describe('User Story: Add Products in the Cart', function() {
         cy.get('@selectedProduct').contains('ADD TO CART').click();
         // Navigate to the cart page
         cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/cart');
-        cy.get('.cart-icon').should('have.text', fruitData.wrongCartItemCount);
+        cy.get('b:contains("No. of Items")').next().should('have.text', fruitData.wrongCartItemCount);
         cy.reload(); // Simulate closing and reopening the browser
         cy.get('.cart-icon').should('have.text', fruitData.wrongCartItemCount);
       });

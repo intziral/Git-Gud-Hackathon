@@ -18,6 +18,11 @@ describe('User Story: Search for products', function() {
     cy.get('.product-image').first().find('img').first().click();
     cy.get('.quick-view').should('be.visible');
   });
+
+  it('TC_ID: fe9f86fc-a0bb-11ee-8c90-0242ac120002	- Search with valid keyword and no match', function () {
+    cy.get('input.search-keyword').type('test');
+    cy.get('.no-results').should('exist');
+  });
   
 });
   

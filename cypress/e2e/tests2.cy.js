@@ -57,11 +57,12 @@ describe('User Story: Complete Order', function() {
       cy.get('.action-block').contains('PROCEED TO CHECKOUT').click();
       cy.get('button').contains('Place Order').click();
 
-      // Open the country dropdown and select a country
-      cy.get('.products-wrapper').contains('Select').click()
-      cy.get('.products-wrapper').contains('Greece').click()
+      // Open the dropdown and select the country
+      cy.get('.products-wrapper').get('select').click();
+      cy.get('select').select('Greece');
 
-      cy.get()
+      // Check selection
+      cy.get('select option:selected').should('have.value', 'Greece');
     });
 
     // Test Case: Accept the Terms & Conditions

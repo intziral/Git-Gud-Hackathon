@@ -1,0 +1,12 @@
+{
+    "expectedProductCount": 30, 
+  
+    "cartItemCount": 1,
+    "totalCartItemCount": 5,
+    "updatedCartItemCount": 4,
+  
+    "updatedQuantity": 2,
+    "updatedTotalPrice": "240",
+    "reducedQuantity": 1,
+    "reducedTotalPrice": "120"
+  }
